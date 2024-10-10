@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Ports</title>
+    <title>AR Ports Istanbul</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://ar-js-org.github.io/AR.js/aframe/build/aframe-ar.js"></script>    
 </head>
@@ -11,102 +11,168 @@
 <body style="margin : 0px; overflow: hidden;">
     <a-scene id="scene" vr-mode-ui="enabled: false"
         arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
- 
-            <!-- Uckuyular Üçkuyular 38.405675209865336, 27.06935935250486 -->
-            <a-image id="Uckuyular"
-                src="https://upload.wikimedia.org/wikipedia/commons/6/66/%C3%9C%C3%A7kuyular_Ferry_Terminal%2C_March_2021_%289%29.jpg" onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.405675209865336; longitude:27.06935935250486;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Uckuyular" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 38.405675209865336; longitude: 27.06935935250486;" position="0 10 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Uckuyular-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.405675209865336; longitude:27.06935935250486;" position="0 -19 1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
+        <!-- Kadıköy İskelesi -->
+        <a-image id="Kadikoy"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Kadikoy_City_Lines_Pier.IMG_1703.jpg/330px-Kadikoy_City_Lines_Pier.IMG_1703.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 40.9901; longitude: 29.0230;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Kadikoy-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 40.9901; longitude: 29.0230;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
-            <!-- 	  Goztepe Göztepe  	   38.399571991405416, 27.083436202065336 -->
-            <a-image id="Goztepe" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/G%C3%B6ztepe_pier.jpg" onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.399571991405416; longitude: 27.083436202065336;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Goztepe" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 38.399571991405416; longitude: 27.083436202065336;" position="0 10 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Goztepe-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.399571991405416; longitude: 27.083436202065336;" position="0 -19 1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+        <!-- Eminönü İskelesi -->
+        <a-image id="Eminonu"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Emin%C3%B6n%C3%BC_Pier_in_March_2024.jpg/330px-Emin%C3%B6n%C3%BC_Pier_in_March_2024.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0177; longitude: 28.9710;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Eminonu-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0177; longitude: 28.9710;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
-            <!-- 	 Karantina 38.40826637555396, 27.106606027145318  -->
-            <a-image id="Karantina"
-                src="https://upload.wikimedia.org/wikipedia/commons/2/29/Karantina_%C4%B0skelesi_%281%29.jpg" onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.40826637555396; longitude: 27.106606027145318;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Karantina" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 38.40826637555396; longitude: 27.106606027145318;" position="0 10 -1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Karantina-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.40826637555396; longitude: 27.106606027145318;" position="0 -19 -1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+        <!-- Beşiktaş İskelesi -->
+        <a-image id="Besiktas"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Be%C5%9Fikta%C5%9F_%C4%B0skelesi_%C4%B0stanbul_IMG_0613.jpg/330px-Be%C5%9Fikta%C5%9F_%C4%B0skelesi_%C4%B0stanbul_IMG_0613.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0410; longitude: 29.0092;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Besiktas-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0410; longitude: 29.0092;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
-            <!-- 	   Konak	   38.418826366849444, 27.125208834874005 -->
-            <a-image id="Konak" src="https://upload.wikimedia.org/wikipedia/commons/4/46/Konak_Terminal.jpg"  onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.418826366849444; longitude: 27.125208834874005;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Konak" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 38.418826366849444; longitude: 27.125208834874005;" position="0 10 -1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Konak-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.418826366849444; longitude: 27.125208834874005;" position="0 -19 1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+        <!-- Karaköy İskelesi -->
+        <a-image id="Karakoy"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Karak%C3%B6y_ferry_pier_%281%29.jpg/375px-Karak%C3%B6y_ferry_pier_%281%29.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0201; longitude: 28.9735;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Karakoy-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0201; longitude: 28.9735;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
-            <!-- 	   Pasaport	   38.42892199253736, 27.13228407441726 -->
-            <a-image id="Pasaport"
-                src="https://upload.wikimedia.org/wikipedia/commons/5/55/Kantar_Karakolu%2C_Izmir.jpg" onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.42892199253736; longitude: 27.13228407441726;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Pasaport" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 38.42892199253736; longitude: 27.13228407441726;" position="0 10 -1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Pasaport-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.42892199253736; longitude: 27.13228407441726;" position="0 -19 -1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+        <!-- Üsküdar İskelesi -->
+        <a-image id="Uskudar"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Iskele_Mosque_Uskudar.jpg/375px-Iskele_Mosque_Uskudar.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0260; longitude: 29.0156;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Uskudar-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0260; longitude: 29.0156;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
-            <!-- 	   Alsancak 	   38.43897576759363, 27.140762959439844 -->
-            <a-image id="Alsancak" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Alsancak_Pier.jpg" onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.43897576759363; longitude: 27.140762959439844;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Alsancak" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 38.43897576759363; longitude: 27.140762959439844;" position="0 10 -1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Alsancak-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.43897576759363; longitude: 27.140762959439844;" position="0 -19 1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+        <!-- Kabataş İskelesi -->
+        <a-image id="Kabatas"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Kabata%C5%9F_%C4%B0skelesi_-_panoramio.jpg/450px-Kabata%C5%9F_%C4%B0skelesi_-_panoramio.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0386; longitude: 28.9948;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Kabatas-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0386; longitude: 28.9948;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
-            <!-- 	Bostanli   Bostanlı 	   38.45202997017321, 27.09778594157115 -->
-            <a-image id="Bostanli"
-                src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Bostanl%C4%B1_Ferry_Terminal%2C_July_2020_%289%29.jpg" onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.45202997017321; longitude: 27.09778594157115;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Bostanli" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 38.45202997017321; longitude: 27.09778594157115;" position="0 10 -1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Bostanli-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.45202997017321; longitude: 27.09778594157115;" position="0 -19 1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+        <!-- Haliç Hattı (Eyüp İskelesi) -->
+        <a-image id="Eyup"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Ey%C3%BCpsultan_Pier.jpg/330px-Ey%C3%BCpsultan_Pier.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0483; longitude: 28.9331;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Eyup-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0483; longitude: 28.9331;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
-            <!-- 	 Karsiyaka  Karşıyaka 38.454830076318316, 27.12052045655903 -->
-            <a-image id="Karsiyaka"
-                src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Kar%C5%9F%C4%B1yaka_terminal.jpg" onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.454830076318316; longitude: 27.12052045655903;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Karsiyaka" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 38.454830076318316; longitude: 27.12052045655903;" position="0 10 -1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Karsiyaka-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.454830076318316; longitude: 27.12052045655903;" position="0 -19 -1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+        <!-- Yenikapı İDO İskelesi -->
+        <a-image id="Yenikapi"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Departing_Yalova.JPG/450px-Departing_Yalova.JPG" onclick="window.location.href='https://www.ido.com.tr/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 40.9986; longitude: 28.9530;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Yenikapi-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 40.9986; longitude: 28.9530;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
-            <a-camera gps-camera rotation-reader></a-camera>
+        <!-- Harem İskelesi -->
+        <a-image id="Harem"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Harem_car_ferry_piers_01.JPG/384px-Harem_car_ferry_piers_01.JPG" onclick="window.location.href='https://www.ido.com.tr/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0055; longitude: 29.0180;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Harem-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0055; longitude: 29.0180;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Kuzguncuk İskelesi -->
+        <a-image id="Kuzguncuk"
+            src="https://mapio.net/images-p/18183566.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0424; longitude: 29.0266;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Kuzguncuk-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0424; longitude: 29.0266;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Ortaköy İskelesi -->
+        <a-image id="Ortakoy"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Ortak%C3%B6y_Pier.jpg/345px-Ortak%C3%B6y_Pier.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0473; longitude: 29.0277;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Ortakoy-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0473; longitude: 29.0277;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Bebek İskelesi -->
+        <a-image id="Bebek"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Bebek_Pier_02.jpg/330px-Bebek_Pier_02.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0756; longitude: 29.0461;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Bebek-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0756; longitude: 29.0461;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Bostancı İskelesi -->
+        <a-image id="Bostanci"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Bostanc%C4%B1_pier.jpg/330px-Bostanc%C4%B1_pier.jpg" onclick="window.location.href='https://www.ido.com.tr/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 40.9592; longitude: 29.0947;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Bostanci-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 40.9592; longitude: 29.0947;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Sirkeci İskelesi -->
+        <a-image id="Sirkeci"
+            src="https://bellekmekanlari.org/wp-content/uploads/2022/11/USEweb_Sirkeci_Vapur_Iskelesi-1024x644.webp" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0145; longitude: 28.9783;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Sirkeci-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0145; longitude: 28.9783;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Bakırköy İskelesi -->
+        <a-image id="Bakirkoy"
+            src="https://www.denizhaber.net/d/other/turyol_iskele.jpg" onclick="window.location.href='https://www.ido.com.tr/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 40.9735; longitude: 28.8754;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Bakirkoy-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 40.9735; longitude: 28.8754;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Adalar (Büyükada) İskelesi -->
+        <a-image id="Buyukada"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Buyukada_1.jpg/800px-Buyukada_1.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 40.8684; longitude: 29.1224;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Buyukada-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 40.8684; longitude: 29.1224;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <a-camera gps-camera rotation-reader></a-camera>
 
     </a-scene>
     <script>
