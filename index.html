@@ -9,13 +9,81 @@
 <body style="margin : 0px; overflow: hidden;">
     <a-scene id="scene" vr-mode-ui="enabled: false"
         arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
-        
+
         <!-- Kadıköy İskelesi with 3D model -->
         <a-entity id="Kadikoy" 
             gltf-model="url(model/model.glb)"  <!-- Path to your model file -->
             scale="5 5 5"
-            gps-entity-place="latitude: 41.00439748963125; longitude: 28.9346468179578;" position="0 2 0"
+            gps-entity-place="latitude: 41.00439748963125; longitude: 28.9346468179578;" position="0 2 0" 
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-entity>
+
+        <!-- Distance Text -->
+        <a-text id="Kadikoy-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.00439748963125; longitude: 28.9346468179578;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
     </a-scene>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var scene = document.querySelector('a-scene');
+
+            // Function to calculate distance between two geographical coordinates
+            function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
+                var R = 6371; // Radius of the Earth in km
+                var dLat = deg2rad(lat2 - lat1);
+                var dLon = deg2rad(lon2 - lon1);
+                var a =
+                    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+                    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+                var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+                var d = R * c; // Distance in km
+                return d * 1000; // Convert to meters
+            }
+
+            function deg2rad(deg) {
+                return deg * (Math.PI / 180);
+            }
+
+            // Update distances every second
+            function updateDistances() {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var userLat = position.coords.latitude;
+                    var userLon = position.coords.longitude;
+
+                    document.querySelectorAll('[gps-entity-place]').forEach(function (entity) {
+                        var placeLat = entity.getAttribute('gps-entity-place').latitude;
+                        var placeLon = entity.getAttribute('gps-entity-place').longitude;
+                        var distance = getDistanceFromLatLonInKm(userLat, userLon, placeLat, placeLon).toFixed(2);
+
+                        var entityId = entity.getAttribute('id') + "-distance";
+                        var distanceEntity = document.getElementById(entityId);
+                        if (distanceEntity) {
+                            distanceEntity.setAttribute('value', `Distance: ${distance} meters`);
+                        }
+
+                        // Scale the object based on distance (optional tweak for real-world scaling)
+                        var baseScale = 5;
+                        var scaleFactor = distance / 500;
+                        var newScale = baseScale + scaleFactor;
+                        newScale = Math.max(baseScale, newScale); // Prevent too small scaling
+
+                        entity.setAttribute('scale', `${newScale} ${newScale} ${newScale}`);
+                    });
+                }, function (err) {
+                    console.warn('ERROR(' + err.code + '): ' + err.message);
+                }, {
+                    enableHighAccuracy: true,
+                    timeout: 5000,
+                    maximumAge: 0
+                });
+            }
+
+            // Initialize distance update
+            updateDistances();
+            setInterval(updateDistances, 1000); // Update every second
+        });
+    </script>
 </body>
 </html>
