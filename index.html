@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>AR.js Location Template</title>
+    <title>AR.js Fixed Location Box</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://ar-js-org.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
@@ -11,13 +11,12 @@
         vr-mode-ui="enabled: false;" 
         arjs="sourceType: webcam; debugUIEnabled: true;">
         
-        <!-- Box with specified coordinates -->
+        <!-- Box at specific location -->
         <a-box 
-            position="0 0.5 0" 
-            rotation="0 45 0" 
-            color="#4CC3D9" 
-            gps-entity-place="latitude: 41.00439748963125; longitude: 28.9346468179578;"
-            scale="3 3 3">
+            color="#FF6347" 
+            scale="5 5 5"
+            look-at="[gps-camera]"
+            gps-entity-place="latitude: 41.00439748963125; longitude: 28.9346468179578;">
         </a-box>
 
         <a-camera gps-camera rotation-reader></a-camera>
