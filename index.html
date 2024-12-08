@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>AR.js Fixed Location Box</title>
+    <title>AR.js Location with Distance</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://ar-js-org.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
@@ -19,7 +19,68 @@
             gps-entity-place="latitude: 41.00439748963125; longitude: 28.9346468179578;">
         </a-box>
 
+        <!-- Text to show distance -->
+        <a-text 
+            id="distance-text"
+            value="Calculating distance..." 
+            color="white" 
+            scale="5 5 5"
+            look-at="[gps-camera]"
+            gps-entity-place="latitude: 41.00439748963125; longitude: 28.9346468179578;"
+            position="0 -1 0">
+        </a-text>
+
         <a-camera gps-camera rotation-reader></a-camera>
     </a-scene>
+
+    <script>
+        window.addEventListener('load', function() {
+            // Function to calculate distance between two lat/lon points
+            function getDistanceFromLatLonInMeters(lat1, lon1, lat2, lon2) {
+                const R = 6371; // Radius of the earth in km
+                const dLat = deg2rad(lat2 - lat1);
+                const dLon = deg2rad(lon2 - lon1);
+                const a = 
+                    Math.sin(dLat/2) * Math.sin(dLat/2) +
+                    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+                    Math.sin(dLon/2) * Math.sin(dLon/2);
+                const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+                const distanceInKm = R * c; // Distance in kilometers
+                return distanceInKm * 1000; // Convert to meters
+            }
+
+            // Convert degrees to radians
+            function deg2rad(deg) {
+                return deg * (Math.PI/180);
+            }
+
+            // Update distance text
+            function updateDistance() {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const userLat = position.coords.latitude;
+                    const userLon = position.coords.longitude;
+                    const targetLat = 41.00439748963125;
+                    const targetLon = 28.9346468179578;
+
+                    const distance = getDistanceFromLatLonInMeters(
+                        userLat, userLon, 
+                        targetLat, targetLon
+                    );
+
+                    const distanceText = document.getElementById('distance-text');
+                    distanceText.setAttribute('value', `Distance: ${distance.toFixed(2)} meters`);
+                }, function(err) {
+                    console.warn(`ERROR(${err.code}): ${err.message}`);
+                }, {
+                    enableHighAccuracy: true,
+                    timeout: 5000,
+                    maximumAge: 0
+                });
+            }
+
+            // Update distance every second
+            setInterval(updateDistance, 1000);
+        });
+    </script>
 </body>
 </html>
