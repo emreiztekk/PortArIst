@@ -10,17 +10,12 @@
     <a-scene id="scene" vr-mode-ui="enabled: false"
         arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
 
-        <!-- Simple Box at Kadıköy İskelesi coordinates -->
-        <a-box id="Kadikoy" 
-            position="0 2 0" 
-            gps-entity-place="latitude: 41.00439748963125; longitude: 28.9346468179578;" 
-            color="blue" 
-            scale="5 5 5">
-        </a-box>
-
-        <!-- Distance Text (optional) -->
-        <a-text id="Kadikoy-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 41.00439748963125; longitude: 28.9346468179578;" position="0 -19 1"></a-text>
+<a-sphere id="Kadikoy" 
+    position="0 2 0" 
+    gps-entity-place="latitude: 41.00439748963125; longitude: 28.9346468179578;" 
+    color="red" 
+    scale="5 5 5">
+</a-sphere>
 
     </a-scene>
 </body>
