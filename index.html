@@ -10,13 +10,12 @@
     <a-scene id="scene" vr-mode-ui="enabled: false"
         arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
 
-<a-sphere id="Kadikoy" 
-    position="0 2 0" 
-    gps-entity-place="latitude: 41.00439748963125; longitude: 28.9346468179578;" 
-    color="red" 
-    scale="5 5 5">
-</a-sphere>
-
+        <a-box 
+            color="#FF6347" 
+            scale="5 5 5"
+            look-at="[gps-camera]"
+            gps-entity-place="latitude: 41.00439748963125; longitude: 28.9346468179578;">
+        </a-box>
     </a-scene>
 </body>
 </html>
