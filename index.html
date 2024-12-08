@@ -1,115 +1,26 @@
 <!DOCTYPE html>
-<html lang="tr">
-
+<html>
 <head>
     <meta charset="utf-8">
-    <title>AR Ports Istanbul</title>
+    <title>AR.js Location Template</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://ar-js-org.github.io/AR.js/aframe/build/aframe-ar.js"></script>    
+    <script src="https://ar-js-org.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
-
-<body style="margin : 0px; overflow: hidden;">
-    <a-scene id="scene" vr-mode-ui="enabled: false"
-        arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
-
-        <!-- Kadıköy İskelesi -->
-        <a-box id="Kadikoy"
+<body style="margin: 0; overflow: hidden;">
+    <a-scene 
+        vr-mode-ui="enabled: false;" 
+        arjs="sourceType: webcam; debugUIEnabled: true;">
+        
+        <!-- Box with specified coordinates -->
+        <a-box 
+            position="0 0.5 0" 
+            rotation="0 45 0" 
             color="#4CC3D9" 
-            onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
-            look-at="[gps-camera]" scale="3 3 3"
-            gps-entity-place="latitude: 40.9901; longitude: 29.0230;" 
-            position="0 2 0"
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-box>
-        <a-text id="Kadikoy-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 40.9901; longitude: 29.0230;" position="0 -19 1"
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
-
-        <!-- Eminönü İskelesi -->
-        <a-box id="Eminonu"
-            color="#FFC65D"
-            onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
-            look-at="[gps-camera]" scale="3 3 3"
-            gps-entity-place="latitude: 41.0177; longitude: 28.9710;" 
-            position="0 2 0"
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-box>
-        <a-text id="Eminonu-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 41.0177; longitude: 28.9710;" position="0 -19 1"
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
-
-        <!-- Beşiktaş İskelesi -->
-        <a-box id="Besiktas"
-            color="#7BC8A4"
-            onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
-            look-at="[gps-camera]" scale="3 3 3"
-            gps-entity-place="latitude: 41.0410; longitude: 29.0092;" 
-            position="0 2 0"
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-box>
-        <a-text id="Besiktas-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 41.0410; longitude: 29.0092;" position="0 -19 1"
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
-
-        <!-- More piers would follow the same pattern... -->
+            gps-entity-place="latitude: 41.00439748963125; longitude: 28.9346468179578;"
+            scale="3 3 3">
+        </a-box>
 
         <a-camera gps-camera rotation-reader></a-camera>
-
     </a-scene>
-    
-    <!-- The existing scripts remain the same -->
-    <script>
-        window.addEventListener('load', function () {
-            var cameraEl = document.querySelector('a-camera');
-            var initialScale = 1;
-            var initialDistance = null;
-
-            function getDistance(touches) {
-                var dx = touches[0].pageX - touches[1].pageX;
-                var dy = touches[0].pageY - touches[1].pageY;
-                return Math.sqrt(dx * dx + dy * dy);
-            }
-
-            function onPinchStart(event) {
-                if (event.touches.length === 2) {
-                    initialDistance = getDistance(event.touches);
-                    document.addEventListener('touchmove', onPinchMove);
-                    document.addEventListener('touchend', onPinchEnd);
-                }
-            }
-
-            function onPinchMove(event) {
-                if (event.touches.length === 2) {
-                    var distance = getDistance(event.touches);
-                    var scale = initialScale * (distance / initialDistance);
-
-                    var newFOV = 80 / scale;
-                    cameraEl.setAttribute('fov', newFOV);
-                }
-            }
-
-            function onPinchEnd(event) {
-                if (event.touches.length < 2) {
-                    document.removeEventListener('touchmove', onPinchMove);
-                    document.removeEventListener('touchend', onPinchEnd);
-
-                    initialDistance = null;
-                }
-            }
-
-            document.addEventListener('touchstart', onPinchStart);
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var scene = document.querySelector('a-scene');
-
-            document.querySelectorAll('a-box').forEach(function (box) {
-                box.addEventListener('click', function () {
-                    // Redirect the user when a box is clicked
-                    window.location.href = 'https://www.izdeniz.com.tr/';
-                });
-            });
-
-            // Rest of the existing script remains the same...
-        });
-    </script>
 </body>
 </html>
