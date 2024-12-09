@@ -193,6 +193,14 @@
                         newScale = Math.max(baseScale, newScale);
 
                         entity.setAttribute('scale', `${newScale} ${newScale} ${newScale}`);
+
+                        // Scale the name text similarly
+                        var nameId = entity.getAttribute('id') + "-name";
+                        var nameEntity = document.getElementById(nameId);
+                        if (nameEntity) {
+                            var nameScale = Math.max(1, baseScale + scaleFactor / 5);
+                            nameEntity.setAttribute('scale', `${nameScale} ${nameScale} ${nameScale}`);
+                        }
                     });
                 }, function (err) {
                     console.warn('ERROR(' + err.code + '): ' + err.message);
