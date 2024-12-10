@@ -18,7 +18,7 @@
             gps-entity-place="latitude: 40.9901; longitude: 29.0230;" position="0 2 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
         <a-text id="Kadikoy-name" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 40.9901; longitude: 29.0230;" position="0 2 1"
+            gps-entity-place="latitude: 40.9901; longitude: 29.0230;" position="0 3 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">Kadıköy İskelesi</a-text>
         <a-text id="Kadikoy-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 40.9901; longitude: 29.0230;" position="0 -19 1"
@@ -31,7 +31,7 @@
             gps-entity-place="latitude: 41.0177; longitude: 28.9710;" position="0 2 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
         <a-text id="Eminonu-name" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 41.0177; longitude: 28.9710;" position="0 2 1"
+            gps-entity-place="latitude: 41.0177; longitude: 28.9710;" position="0 3 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">Eminönü İskelesi</a-text>
         <a-text id="Eminonu-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 41.0177; longitude: 28.9710;" position="0 -19 1"
@@ -44,7 +44,7 @@
             gps-entity-place="latitude: 41.0410; longitude: 29.0092;" position="0 2 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
         <a-text id="Besiktas-name" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 41.0410; longitude: 29.0092;" position="0 2 1"
+            gps-entity-place="latitude: 41.0410; longitude: 29.0092;" position="0 3 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">Beşiktaş İskelesi</a-text>
         <a-text id="Besiktas-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 41.0410; longitude: 29.0092;" position="0 -19 1"
@@ -57,7 +57,7 @@
             gps-entity-place="latitude: 41.0201; longitude: 28.9735;" position="0 2 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
         <a-text id="Karakoy-name" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 41.0201; longitude: 28.9735;" position="0 2 1"
+            gps-entity-place="latitude: 41.0201; longitude: 28.9735;" position="0 3 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">Karaköy İskelesi</a-text>
         <a-text id="Karakoy-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 41.0201; longitude: 28.9735;" position="0 -19 1"
@@ -70,7 +70,7 @@
             gps-entity-place="latitude: 41.0260; longitude: 29.0156;" position="0 2 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
         <a-text id="Uskudar-name" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 41.0260; longitude: 29.0156;" position="0 2 1"
+            gps-entity-place="latitude: 41.0260; longitude: 29.0156;" position="0 3 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">Üsküdar İskelesi</a-text>
         <a-text id="Uskudar-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 41.0260; longitude: 29.0156;" position="0 -19 1"
@@ -83,7 +83,7 @@
             gps-entity-place="latitude: 41.0386; longitude: 28.9948;" position="0 2 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
         <a-text id="Kabatas-name" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 41.0386; longitude: 28.9948;" position="0 2 1"
+            gps-entity-place="latitude: 41.0386; longitude: 28.9948;" position="0 3 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">Kabataş İskelesi</a-text>
         <a-text id="Kabatas-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 41.0386; longitude: 28.9948;" position="0 -19 1"
@@ -193,6 +193,14 @@
                         newScale = Math.max(baseScale, newScale);
 
                         entity.setAttribute('scale', `${newScale} ${newScale} ${newScale}`);
+
+                        // Scale the name text similarly
+                        var nameId = entity.getAttribute('id') + "-name";
+                        var nameEntity = document.getElementById(nameId);
+                        if (nameEntity) {
+                            var nameScale = Math.max(1, baseScale + scaleFactor / 5);
+                            nameEntity.setAttribute('scale', `${nameScale} ${nameScale} ${nameScale}`);
+                        }
                     });
                 }, function (err) {
                     console.warn('ERROR(' + err.code + '): ' + err.message);
