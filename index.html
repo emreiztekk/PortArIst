@@ -10,16 +10,14 @@
 
 <body style="margin : 0px; overflow: hidden;">
     <a-scene id="scene" vr-mode-ui="enabled: false"
-        arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">        
+        arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
+
         <!-- Kadıköy İskelesi -->
         <a-image id="Kadikoy"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Kadikoy_City_Lines_Pier.IMG_1703.jpg/330px-Kadikoy_City_Lines_Pier.IMG_1703.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
             look-at="[gps-camera]" scale="5 5 5"
             gps-entity-place="latitude: 40.9901; longitude: 29.0230;" position="0 2 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-        <a-text id="Kadikoy-name" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 40.9901; longitude: 29.0230;" position="0 2 1"
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">Kadıköy İskelesi</a-text>
         <a-text id="Kadikoy-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 40.9901; longitude: 29.0230;" position="0 -19 1"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
@@ -30,9 +28,6 @@
             look-at="[gps-camera]" scale="5 5 5"
             gps-entity-place="latitude: 41.0177; longitude: 28.9710;" position="0 2 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-        <a-text id="Eminonu-name" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 41.0177; longitude: 28.9710;" position="0 2 1"
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">Eminönü İskelesi</a-text>
         <a-text id="Eminonu-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 41.0177; longitude: 28.9710;" position="0 -19 1"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
@@ -43,9 +38,6 @@
             look-at="[gps-camera]" scale="5 5 5"
             gps-entity-place="latitude: 41.0410; longitude: 29.0092;" position="0 2 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-        <a-text id="Besiktas-name" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 41.0410; longitude: 29.0092;" position="0 2 1"
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">Beşiktaş İskelesi</a-text>
         <a-text id="Besiktas-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 41.0410; longitude: 29.0092;" position="0 -19 1"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
@@ -56,9 +48,6 @@
             look-at="[gps-camera]" scale="5 5 5"
             gps-entity-place="latitude: 41.0201; longitude: 28.9735;" position="0 2 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-        <a-text id="Karakoy-name" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 41.0201; longitude: 28.9735;" position="0 2 1"
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">Karaköy İskelesi</a-text>
         <a-text id="Karakoy-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 41.0201; longitude: 28.9735;" position="0 -19 1"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
@@ -69,9 +58,6 @@
             look-at="[gps-camera]" scale="5 5 5"
             gps-entity-place="latitude: 41.0260; longitude: 29.0156;" position="0 2 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-        <a-text id="Uskudar-name" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 41.0260; longitude: 29.0156;" position="0 2 1"
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">Üsküdar İskelesi</a-text>
         <a-text id="Uskudar-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 41.0260; longitude: 29.0156;" position="0 -19 1"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
@@ -82,11 +68,108 @@
             look-at="[gps-camera]" scale="5 5 5"
             gps-entity-place="latitude: 41.0386; longitude: 28.9948;" position="0 2 0"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-        <a-text id="Kabatas-name" look-at="[gps-camera]" color="white" scale="5 5 5"
-            gps-entity-place="latitude: 41.0386; longitude: 28.9948;" position="0 2 1"
-            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">Kabataş İskelesi</a-text>
         <a-text id="Kabatas-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 41.0386; longitude: 28.9948;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Haliç Hattı (Eyüp İskelesi) -->
+        <a-image id="Eyup"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Ey%C3%BCpsultan_Pier.jpg/330px-Ey%C3%BCpsultan_Pier.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0483; longitude: 28.9331;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Eyup-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0483; longitude: 28.9331;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Yenikapı İDO İskelesi -->
+        <a-image id="Yenikapi"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Departing_Yalova.JPG/450px-Departing_Yalova.JPG" onclick="window.location.href='https://www.ido.com.tr/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 40.9986; longitude: 28.9530;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Yenikapi-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 40.9986; longitude: 28.9530;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Harem İskelesi -->
+        <a-image id="Harem"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Harem_car_ferry_piers_01.JPG/384px-Harem_car_ferry_piers_01.JPG" onclick="window.location.href='https://www.ido.com.tr/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0055; longitude: 29.0180;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Harem-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0055; longitude: 29.0180;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Kuzguncuk İskelesi -->
+        <a-image id="Kuzguncuk"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Selfie_time_in_Istanbul_streets_%2816428058798%29.jpg/405px-Selfie_time_in_Istanbul_streets_%2816428058798%29.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0424; longitude: 29.0266;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Kuzguncuk-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0424; longitude: 29.0266;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Ortaköy İskelesi -->
+        <a-image id="Ortakoy"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Ortak%C3%B6y_Pier.jpg/345px-Ortak%C3%B6y_Pier.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0473; longitude: 29.0277;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Ortakoy-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0473; longitude: 29.0277;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Bebek İskelesi -->
+        <a-image id="Bebek"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Bebek_Pier_02.jpg/330px-Bebek_Pier_02.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0756; longitude: 29.0461;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Bebek-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0756; longitude: 29.0461;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Bostancı İskelesi -->
+        <a-image id="Bostanci"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Bostanc%C4%B1_pier.jpg/330px-Bostanc%C4%B1_pier.jpg" onclick="window.location.href='https://www.ido.com.tr/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 40.9592; longitude: 29.0947;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Bostanci-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 40.9592; longitude: 29.0947;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Sirkeci İskelesi -->
+        <a-image id="Sirkeci"
+            src="" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 41.0145; longitude: 28.9783;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Sirkeci-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 41.0145; longitude: 28.9783;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Bakırköy İskelesi -->
+        <a-image id="Bakirkoy"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/HouseOfSanStefanoTreaty.jpg/375px-HouseOfSanStefanoTreaty.jpg" onclick="window.location.href='https://www.ido.com.tr/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 40.9735; longitude: 28.8754;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Bakirkoy-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 40.9735; longitude: 28.8754;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
+        <!-- Adalar (Büyükada) İskelesi -->
+        <a-image id="Buyukada"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Buyukada_1.jpg/800px-Buyukada_1.jpg" onclick="window.location.href='https://www.sehirhatlari.istanbul/'"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 40.8684; longitude: 29.1224;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <a-text id="Buyukada-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 40.8684; longitude: 29.1224;" position="0 -19 1"
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
         <a-camera gps-camera rotation-reader></a-camera>
@@ -138,6 +221,22 @@
         document.addEventListener('DOMContentLoaded', function () {
             var scene = document.querySelector('a-scene');
 
+
+            document.querySelectorAll('a-image').forEach(function (image) {
+                image.addEventListener('click', function () {
+                    // Redirect the user when an image is clicked
+                    window.location.href = 'https://www.izdeniz.com.tr/';
+                });
+            });
+
+            // image.addEventListener('mouseenter', function () {
+            //     image.setAttribute('scale', '5.5 5.5 5.5');  
+            // });
+            // image.addEventListener('mouseleave', function () {
+            //     image.setAttribute('scale', '5 5 5');  
+            // });
+
+
             if (scene) {
                 scene.addEventListener('click', function () {
                     // Select all entities with animation
@@ -179,12 +278,13 @@
                     document.querySelectorAll('[gps-entity-place]').forEach(function (entity) {
                         var placeLat = entity.getAttribute('gps-entity-place').latitude;
                         var placeLon = entity.getAttribute('gps-entity-place').longitude;
-                        var distance = Math.round(getDistanceFromLatLonInKm(userLat, userLon, placeLat, placeLon));
+                        var distance = getDistanceFromLatLonInKm(userLat, userLon, placeLat, placeLon).toFixed(2);
 
                         var entityId = entity.getAttribute('id') + "-distance";
                         var distanceEntity = document.getElementById(entityId);
                         if (distanceEntity) {
-                            distanceEntity.setAttribute('value', `${distance} metre`);
+                            distanceEntity.setAttribute('value', ` ${distance} metre`);
+                            // distanceEntity.setAttribute('value', `Mesafe: ${distance} metre`);
                         }
 
                         var baseScale = 5;
@@ -194,13 +294,11 @@
 
                         entity.setAttribute('scale', `${newScale} ${newScale} ${newScale}`);
 
-                        // Scale the name text similarly
-                        var nameId = entity.getAttribute('id') + "-name";
-                        var nameEntity = document.getElementById(nameId);
-                        if (nameEntity) {
-                            var nameScale = Math.max(1, baseScale + scaleFactor / 5);
-                            nameEntity.setAttribute('scale', `${nameScale} ${nameScale} ${nameScale}`);
-                        }
+                        // var baseHeight = 2; // 
+                        // var heightAdjustmentFactor = 0.1; 
+                        // var newHeight = baseHeight + (distance * heightAdjustmentFactor);
+                        // entity.setAttribute('scale', `${newScale} ${newScale} ${newScale}`);
+                        // entity.setAttribute('position', `0 ${newHeight} 0`); 
                     });
                 }, function (err) {
                     console.warn('ERROR(' + err.code + '): ' + err.message);
